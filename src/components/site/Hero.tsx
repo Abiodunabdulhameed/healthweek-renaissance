@@ -100,39 +100,6 @@ export function Hero() {
           </a>
         </div>
 
-        {/* Floating medical symbol */}
-        <div className="relative mx-auto mt-16 flex h-72 w-72 items-center justify-center">
-          <div className="animate-float relative flex h-full w-full items-center justify-center">
-            <div className="absolute inset-0 rounded-full border border-gold/30" />
-            <div className="animate-ring-pulse absolute inset-6 rounded-full border border-gold/40" />
-            <span className="relative font-display text-[11rem] leading-none text-gold">
-              ⚕
-            </span>
-            <svg
-              aria-hidden
-              className="absolute -bottom-2 -right-2 h-24 w-24 -rotate-[15deg] text-emerald"
-              viewBox="0 0 100 100"
-              fill="currentColor"
-            >
-              <path d="M50 5 Q72 38 60 92 Q50 60 40 92 Q28 38 50 5 Z" opacity="0.85" />
-              <path d="M50 20 L50 92" stroke="#0d5b3e" strokeWidth="1.5" />
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom shape */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 -mx-8">
-        <div className="relative mx-8 h-full overflow-hidden rounded-t-[50%] border-t-2 border-gold bg-gradient-to-b from-dark-emerald to-emerald">
-          <div
-            className="absolute inset-0 opacity-30"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, rgba(212,175,55,0.4) 1px, transparent 1px)",
-              backgroundSize: "16px 16px",
-            }}
-          />
-        </div>
       </div>
     </section>
   );

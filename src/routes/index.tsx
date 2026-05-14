@@ -14,9 +14,9 @@ function Index() {
     <main className="bg-cream font-body text-body-dark">
       <Hero />
       <EventSchedule />
-      <GlanceCarousel />
       <TicketExperience />
       <AwardNominations />
+      <GlanceCarousel />
     </main>
   );
 }
