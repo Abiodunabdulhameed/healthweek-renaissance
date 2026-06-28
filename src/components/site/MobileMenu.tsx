@@ -97,7 +97,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                   />
                   <span className="relative flex items-center gap-4">
                     <span className="font-display text-base text-emerald transition-colors duration-300 group-hover:text-white">
-                      {String(i + 1).padStart(2, "0")}
+                      {"\n"}
                     </span>
                     <span className="font-display text-emerald transition-colors duration-300 group-hover:text-white" style={{ fontSize: "1.2rem" }}>
                       {it.label}
