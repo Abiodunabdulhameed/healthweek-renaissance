@@ -24,6 +24,7 @@ const gallery = [
 export function GlanceCarousel() {
   return (
     <section
+      id="glance"
       className="relative overflow-hidden px-6 py-24 sm:px-10"
       style={{ backgroundColor: "#F9F7F2" }}
     >

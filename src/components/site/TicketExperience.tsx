@@ -28,7 +28,7 @@ const tickets = [
 export function TicketExperience() {
   return (
     <section
-      id="tickets"
+      id="ticket-experience"
       className="relative overflow-hidden px-6 py-24 sm:px-10"
       style={{ backgroundColor: "#FDFBF7" }}
     >
