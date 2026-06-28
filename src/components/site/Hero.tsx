@@ -53,7 +53,7 @@ export function Hero() {
             className="animate-fade-up font-display text-[3rem] italic leading-[1.05] text-emerald"
             style={{ animationDelay: "1.2s" }}
           >
-            The Renaissance.
+            The Emergence.
           </h3>
         </div>
 
@@ -74,8 +74,7 @@ export function Hero() {
           className="animate-fade-up mt-6 max-w-md font-body text-base leading-relaxed text-body-muted"
           style={{ animationDelay: "1.4s" }}
         >
-          A new era of growth, discovery and impact—where knowledge flourishes,
-          compassion leads, and futures are transformed.
+          A celebration of growth, reflection, service and the journey into new horizons.
         </p>
 
         {/* Buttons */}

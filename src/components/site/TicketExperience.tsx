@@ -118,7 +118,7 @@ export function TicketExperience() {
             Learn. Lead. Heal.
           </h3>
           <p className="mt-3 max-w-md font-body text-sm text-white/80">
-            Join hundreds of medical students for a week-long renaissance of ideas,
+            Join hundreds of medical students for a week-long emergence of ideas,
             service and celebration.
           </p>
         </div>
