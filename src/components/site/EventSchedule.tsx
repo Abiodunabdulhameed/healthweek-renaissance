@@ -81,7 +81,7 @@ function EventCard({ event }: { event: (typeof events)[number] }) {
 export function EventSchedule() {
   return (
     <section
-      id="schedule"
+      id="event-schedule"
       className="relative overflow-hidden px-6 py-24 sm:px-10"
       style={{ backgroundColor: "#F8F4EE" }}
     >
