@@ -1,25 +1,8 @@
-const gallery = [
-  {
-    title: "Health Outreach",
-    year: "2024",
-    img: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Medical Workshop",
-    year: "2023",
-    img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Community Impact",
-    year: "2022",
-    img: "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Student Engagement",
-    year: "2021",
-    img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=900&q=80",
-  },
-];
+import img1 from "@/assets/glance/2025081812243833.jpg.asset.json";
+import img2 from "@/assets/glance/2025081813172252.jpg.asset.json";
+import img3 from "@/assets/glance/A88_8788.jpg.asset.json";
+
+const gallery = [img1.url, img2.url, img3.url];
 
 export function GlanceCarousel() {
   return (
@@ -43,13 +26,13 @@ export function GlanceCarousel() {
           <div className="flex items-center gap-3">
             <span className="h-px w-10 bg-gold" />
             <span className="font-body text-[0.7rem] uppercase tracking-[0.3em] text-muted-gold">
-              FUTAMSA In A Glance
+              FUTAMSA HealthWeek'25 In A Glance
             </span>
           </div>
           <h2 className="mt-5 font-display text-4xl leading-tight md:text-5xl">
-            <span className="text-emerald">Moments That</span>
+            <span className="text-emerald">FUTAMSA HealthWeek'25</span>
             <br />
-            <span className="text-gold">Defined Impact.</span>
+            <span className="text-gold">In A Glance.</span>
           </h2>
           <p className="mt-5 max-w-md font-body text-base leading-relaxed text-body-muted">
             From outreach campaigns to grand celebrations, every Health Week has left
@@ -73,42 +56,45 @@ export function GlanceCarousel() {
         {/* Right carousel */}
         <div className="-mr-6 sm:-mr-10 lg:mr-0">
           <div className="scrollbar-hide flex snap-x snap-mandatory gap-5 overflow-x-auto pr-6 sm:pr-10 lg:pr-0">
-            {gallery.map((g) => (
+            {gallery.map((src, i) => (
               <article
-                key={g.title}
+                key={i}
                 className="group relative min-w-[82%] snap-start overflow-hidden rounded-[2rem] border border-gold/40 bg-white shadow-[0_30px_70px_-30px_rgba(13,91,62,0.5)] sm:min-w-[65%] lg:min-w-[360px]"
               >
                 <div className="relative h-[420px] overflow-hidden lg:h-[500px]">
                   <img
-                    src={g.img}
-                    alt={g.title}
+                    src={src}
+                    alt={`HealthWeek '25 moment ${i + 1}`}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-emerald/90 via-dark-emerald/30 to-transparent" />
                   <span className="absolute left-5 top-5 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 font-body text-[0.65rem] uppercase tracking-[0.2em] text-white backdrop-blur-md">
-                    {g.year}
+                    2025
                   </span>
                   <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="font-display text-2xl text-white">{g.title}</h3>
+                    <h3 className="font-display text-2xl text-white">HealthWeek '25</h3>
                     <p className="mt-1 font-body text-sm text-white/80">
-                      A defining moment from FUTAMSA HealthWeek.
+                      Celebrating growth, reflection, service and new horizons.
                     </p>
                   </div>
-                  <span className="absolute right-5 top-1/2 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-md transition-transform duration-300 group-hover:translate-x-1 lg:flex">
-                    →
-                  </span>
                 </div>
               </article>
             ))}
           </div>
 
           <div className="mt-6 flex items-center justify-between pr-6 sm:pr-10 lg:pr-0">
-            <div className="flex items-center gap-2">
-              <span className="h-1.5 w-8 rounded-full bg-gold" />
-              <span className="h-1.5 w-3 rounded-full bg-emerald/30" />
-              <span className="h-1.5 w-3 rounded-full bg-emerald/30" />
-              <span className="h-1.5 w-3 rounded-full bg-emerald/30" />
+            <div className="flex flex-wrap items-center gap-1.5">
+              {gallery.map((_, i) => (
+                <span
+                  key={i}
+                  className={
+                    i === 0
+                      ? "h-1.5 w-8 rounded-full bg-gold"
+                      : "h-1.5 w-3 rounded-full bg-emerald/30"
+                  }
+                />
+              ))}
             </div>
             <span className="font-body text-[0.65rem] uppercase tracking-[0.25em] text-body-muted">
               Swipe to explore

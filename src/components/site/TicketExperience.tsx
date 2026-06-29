@@ -1,26 +1,46 @@
+const TICKET_URL = "https://forms.gle/fEBSk99ggGBfpaAr9";
+
 const tickets = [
   {
     badge: "Most Popular",
-    name: "Regular",
-    price: "₦5k",
+    name: "REGULAR",
+    price: "₦6,000",
+    subLabel: "",
     desc: "Standard access to all HealthWeek core experiences and sessions.",
-    features: ["Full week access", "Welcome kit", "Workshop entry"],
+    features: [
+      "One delicious meal",
+      "Standard refreshments",
+      "Standard seating",
+      "Access to the Dinner & Awards Night",
+    ],
     border: "border-gold",
   },
   {
     badge: "Best Value",
-    name: "Couples",
-    price: "₦11k",
+    name: "COUPLE",
+    price: "₦14,000",
+    subLabel: "",
     desc: "Bring someone along and experience HealthWeek together.",
-    features: ["Two full passes", "Reserved seating", "Couple keepsake"],
+    features: [
+      "Two meal selections",
+      "Standard + extra refreshments",
+      "Side menu",
+      "Reserved couple seating",
+    ],
     border: "border-cream",
   },
   {
     badge: "Premium",
-    name: "VIP",
-    price: "₦7k",
+    name: "PREMIUM TABLE",
+    price: "₦45,000",
+    subLabel: "Table for 5",
     desc: "Priority seating, premium access, and exclusive event privileges.",
-    features: ["Front-row seating", "Exclusive lounge", "VIP gift bag"],
+    features: [
+      "Three meal selections",
+      "Premium refreshments with selected wine",
+      "Premium side menu",
+      "Exclusive front-row table",
+    ],
     border: "border-gold border-2",
   },
 ];
