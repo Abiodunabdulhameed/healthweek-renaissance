@@ -1,26 +1,46 @@
+const TICKET_URL = "https://forms.gle/fEBSk99ggGBfpaAr9";
+
 const tickets = [
   {
     badge: "Most Popular",
-    name: "Regular",
-    price: "₦5k",
+    name: "REGULAR",
+    price: "₦6,000",
+    subLabel: "",
     desc: "Standard access to all HealthWeek core experiences and sessions.",
-    features: ["Full week access", "Welcome kit", "Workshop entry"],
+    features: [
+      "One delicious meal",
+      "Standard refreshments",
+      "Standard seating",
+      "Access to the Dinner & Awards Night",
+    ],
     border: "border-gold",
   },
   {
     badge: "Best Value",
-    name: "Couples",
-    price: "₦11k",
+    name: "COUPLE",
+    price: "₦14,000",
+    subLabel: "",
     desc: "Bring someone along and experience HealthWeek together.",
-    features: ["Two full passes", "Reserved seating", "Couple keepsake"],
+    features: [
+      "Two meal selections",
+      "Standard + extra refreshments",
+      "Side menu",
+      "Reserved couple seating",
+    ],
     border: "border-cream",
   },
   {
     badge: "Premium",
-    name: "VIP",
-    price: "₦7k",
+    name: "PREMIUM TABLE",
+    price: "₦45,000",
+    subLabel: "Table for 5",
     desc: "Priority seating, premium access, and exclusive event privileges.",
-    features: ["Front-row seating", "Exclusive lounge", "VIP gift bag"],
+    features: [
+      "Three meal selections",
+      "Premium refreshments with selected wine",
+      "Premium side menu",
+      "Exclusive front-row table",
+    ],
     border: "border-gold border-2",
   },
 ];
@@ -79,6 +99,9 @@ export function TicketExperience() {
                 {t.name}
               </h3>
               <div className="mt-2 font-display text-5xl text-gold">{t.price}</div>
+              {t.subLabel && (
+                <div className="mt-1 font-body text-xs text-gold">{t.subLabel}</div>
+              )}
               <div className="mt-5 flex items-center gap-3 text-gold">
                 <span className="h-px flex-1 bg-gold/50" />
                 <span>✦</span>
@@ -98,9 +121,14 @@ export function TicketExperience() {
                   </li>
                 ))}
               </ul>
-              <button className="mt-7 w-full rounded-full bg-gradient-to-r from-dark-emerald to-emerald py-3 font-body text-xs font-semibold uppercase tracking-[0.2em] text-cream transition-colors duration-300 group-hover:bg-gold group-hover:from-gold group-hover:to-gold group-hover:text-dark-emerald">
+              <a
+                href={TICKET_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 block w-full rounded-full bg-gradient-to-r from-dark-emerald to-emerald py-3 text-center font-body text-xs font-semibold uppercase tracking-[0.2em] text-cream transition-colors duration-300 group-hover:bg-gold group-hover:from-gold group-hover:to-gold group-hover:text-dark-emerald"
+              >
                 Get Ticket
-              </button>
+              </a>
             </div>
           </div>
         ))}
@@ -123,7 +151,9 @@ export function TicketExperience() {
           </p>
         </div>
         <a
-          href="#"
+          href={TICKET_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="relative mt-6 inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 font-body text-xs font-bold uppercase tracking-[0.2em] text-dark-emerald transition-transform duration-300 hover:scale-105 md:mt-0"
         >
           Reserve Your Seat →
