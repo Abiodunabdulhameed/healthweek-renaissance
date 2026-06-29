@@ -99,6 +99,9 @@ export function TicketExperience() {
                 {t.name}
               </h3>
               <div className="mt-2 font-display text-5xl text-gold">{t.price}</div>
+              {t.subLabel && (
+                <div className="mt-1 font-body text-xs text-gold">{t.subLabel}</div>
+              )}
               <div className="mt-5 flex items-center gap-3 text-gold">
                 <span className="h-px flex-1 bg-gold/50" />
                 <span>✦</span>
@@ -118,9 +121,14 @@ export function TicketExperience() {
                   </li>
                 ))}
               </ul>
-              <button className="mt-7 w-full rounded-full bg-gradient-to-r from-dark-emerald to-emerald py-3 font-body text-xs font-semibold uppercase tracking-[0.2em] text-cream transition-colors duration-300 group-hover:bg-gold group-hover:from-gold group-hover:to-gold group-hover:text-dark-emerald">
+              <a
+                href={TICKET_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 block w-full rounded-full bg-gradient-to-r from-dark-emerald to-emerald py-3 text-center font-body text-xs font-semibold uppercase tracking-[0.2em] text-cream transition-colors duration-300 group-hover:bg-gold group-hover:from-gold group-hover:to-gold group-hover:text-dark-emerald"
+              >
                 Get Ticket
-              </button>
+              </a>
             </div>
           </div>
         ))}
@@ -143,7 +151,9 @@ export function TicketExperience() {
           </p>
         </div>
         <a
-          href="#"
+          href={TICKET_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="relative mt-6 inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 font-body text-xs font-bold uppercase tracking-[0.2em] text-dark-emerald transition-transform duration-300 hover:scale-105 md:mt-0"
         >
           Reserve Your Seat →
