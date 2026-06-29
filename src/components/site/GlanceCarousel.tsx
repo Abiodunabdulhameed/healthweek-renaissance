@@ -1,8 +1,15 @@
 import img1 from "@/assets/glance/2025081812243833.jpg.asset.json";
 import img2 from "@/assets/glance/2025081813172252.jpg.asset.json";
 import img3 from "@/assets/glance/A88_8788.jpg.asset.json";
+import img4 from "@/assets/glance/A88_8820.jpg.asset.json";
+import img5 from "@/assets/glance/A88_8797.jpg.asset.json";
+import img6 from "@/assets/glance/2025081812291519.jpg.asset.json";
+import img7 from "@/assets/glance/IMG_5066.JPG.asset.json";
+import img8 from "@/assets/glance/20250814_052647.jpg.asset.json";
+import img9 from "@/assets/glance/20250814_052623.jpg.asset.json";
+import img10 from "@/assets/glance/IMG_5062.JPG.asset.json";
 
-const gallery = [img1.url, img2.url, img3.url];
+const gallery = [img1.url, img2.url, img3.url, img4.url, img5.url, img6.url, img7.url, img8.url, img9.url, img10.url];
 
 export function GlanceCarousel() {
   return (
